@@ -1,0 +1,75 @@
+/* css/game_cards.css */
+
+/* 1. Βασική Διάταξη Ταμπλό */
+.board-area { 
+    background: rgba(255,255,255,0.05); 
+    border-radius: 15px; 
+    padding: 20px; 
+    margin: 15px 0; 
+    border: 1px solid rgba(255,255,255,0.1);
+    /* Απαραίτητο για το absolute positioning των καρτών */
+    position: relative; 
+    min-height: 200px; 
+}
+
+.my-hand { 
+    background: rgba(255,255,255,0.05); 
+    border-radius: 15px; 
+    padding: 20px; 
+    margin: 15px 0; 
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.cards-flex { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 15px; 
+    min-height: 130px; 
+    align-items: center;
+}
+
+/* 2. Σχεδιασμός Κάρτας */
+.card { 
+    width: 80px; 
+    height: 120px; 
+    background: white; 
+    border-radius: 8px; 
+    color: black; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px;
+    font-weight: bold; 
+    font-size: 1.8em; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4); 
+    border: 1px solid #ccc;
+    /* Smooth κίνηση */
+    transition: transform 0.3s ease-out, left 0.3s ease-out; 
+    box-sizing: border-box;
+}
+
+/* Χρώμα για Καρδιές (H) και Καρά (D) */
+.card.red { color: #d63031; }
+
+/* 3. Κουμπιά Καρτών (στο χέρι) */
+.card-btn { 
+    cursor: pointer; 
+    border: none; 
+    background: none; 
+    padding: 0; 
+    margin: 0; 
+}
+.card-btn:hover .card { 
+    transform: translateY(-20px) rotate(2deg); /* Λίγο σήκωμα και στροφή */
+}
+
+/* 4. Στοιβαγμένες Κάρτες (στο τραπέζι) */
+.table-card {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Για να φαίνεται η φιγούρα, η τελευταία κάρτα πρέπει να είναι από πάνω */
+    z-index: 10; 
+}
