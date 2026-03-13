@@ -1,0 +1,68 @@
+/* Γενικό φόντο (ίδιο με το game) */
+body { 
+    background: #1a472a; 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+/* Το κεντρικό πλαίσιο του Lobby */
+.lobby-container { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+    text-align: center; 
+    width: 350px; 
+}
+
+.lobby-container h2 { 
+    color: #2c3e50; 
+    margin-bottom: 30px; 
+}
+
+.lobby-container span#display-user { 
+    color: #27ae60; 
+    font-weight: bold; 
+}
+
+/* Κουμπιά */
+.lobby-container button { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    border: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background 0.3s, transform 0.2s; 
+}
+
+#createBtn { background: #27ae60; color: white; }
+#createBtn:hover { background: #2ecc71; transform: scale(1.02); }
+
+#joinBtn { background: #2980b9; color: white; }
+#joinBtn:hover { background: #3498db; transform: scale(1.02); }
+
+.logout-btn { background: #e74c3c; color: white; margin-top: 20px !important; }
+.logout-btn:hover { background: #c0392b; }
+
+/* Input για το ID */
+.lobby-container input[type="number"] { 
+    width: 90%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    text-align: center; 
+    font-size: 1.1em; 
+}
+
+.divider { 
+    margin: 15px 0; 
+    color: #7f8c8d; 
+    font-weight: bold; 
+    position: relative; 
+}
